@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int getThree(){
+    int n = 3;
+    return n;
+}
+
+int main() {
+    
+    // Print the value that
+    // is return by getThree()
+    // function
+    printf("%d", getThree());
+    return 0;
+}

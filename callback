@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+void A() { 
+  printf("I am function A");
+}
+
+// Callback function
+void B(void (*ptr)()) {
+  
+  	// Callback to A
+    (*ptr)(); 
+}
+
+int main() {
+  
+  	// Function pointer to A()
+    void (*ptr)() = &A;
+
+    // Calling function B and passing
+    // address of the function A as argument
+    B(ptr);
+
+    return 0;
+}
